@@ -25,6 +25,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+#results {
+    font-family: 'Montserrat', sans-serif;
+     text-shadow: 3px 2px 5px #000;
+
+}
+
 #song-list {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
