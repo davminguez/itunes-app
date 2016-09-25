@@ -67,6 +67,8 @@ function drawSongs(songList) {
  
   itemList.append(card);
 
+  $('#results').html(songList.length + ' Results Found');
+
 
 });
 
