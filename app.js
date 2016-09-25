@@ -10,6 +10,8 @@ function drawSongs(songList) {
 
   let itemList = $('#song-list');
   let art = $('#album-art');
+  let sample = $('#sample');
+
   // clears out previous search results
   itemList.empty();
   console.log(songList);
@@ -17,13 +19,57 @@ function drawSongs(songList) {
   songList.forEach(function (song) {
     let songPrev = song.preview;
 
-    let card = '<img width="75px" src="' + song.albumArt + '"><ul><li id="songTitle"><a href="' + songPrev +
-      '"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i><audio controls><source src="' + songPrev + '"></audio></a> ' + song.title + '</li><li id="priceText"><strong>' + "Price</strong> / $"
-      + song.price + '</li><li><strong>' + "By</strong> / " + song.artist + '</li><li><strong>' + "Album </strong> / " + song.collection + '</li></ul>';
+    let card = '<img width="75px" src="' + song.albumArt + '"><ul><li id="songTitle">' + song.title
+      + '</li><li id="priceText"><strong>' + "Price</strong> / $"
+      + song.price + '</li><li><strong>' + "By</strong> / " + song.artist + '</li><li><strong>'
+      + "Album </strong> / " + song.collection + '</li><li><audio controls class="audio"><source src="' + songPrev + '"></audio></li></ul>';
 
-    itemList.append(card);
 
-  });
+    // $('.audio').each(function (index, value) {
+    //   if (!value.paused) {
+    //     value.pause();
+    //   }
+    // });
+
+    // var audio = songPrev[0];
+    // if (audio.paused) {
+    //   audio.play();
+    // } else {
+    //   audio.pause();
+    // };
+
+
+
+  // Attempt to add play preview function to each play icon but didn't work because all play classes played all at once because they're named the same
+  // let sample = `
+  //   <script>$(document).ready(function () {
+  //   var audioElement = document.createElement('audio');
+
+  //   audioElement.setAttribute('src', "` + songPrev + `");
+
+  //   $.get();
+
+  //   audioElement.addEventListener("load", function () {
+  //     audioElement.play();
+  //   }, true);
+
+  //   $('.play').click(function () {
+  //     audioElement.play();
+  //   });
+
+  //   $('.pause').click(function () {
+  //     audioElement.stop();
+  //   });
+  // });
+  // </script>
+  // `
+  // itemList.append(sample);
+ 
+  itemList.append(card);
+
+
+});
+
 
 
 }
