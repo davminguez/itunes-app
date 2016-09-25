@@ -1,0 +1,73 @@
+
+body {
+    margin-top: 10px;
+    color: #fff;
+    background: url('img/woodplanks.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+.header h1 {
+    font-size: 65px;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+    /*text-shadow: 1px 0 15px #428bca;*/
+    text-shadow: 3px 2px 5px #000;
+
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#artist {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#song-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    
+}
+
+audio {
+    font-size: 20px;
+}
+#song-list ul {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-left: 20px;
+
+}
+
+#song-list ul li {
+    list-style-type: none;
+    padding-top: 3px;
+    padding-left: 45px;
+    margin: 0;
+}
+
+#songTitle {
+    font-size: 20px;
+    color: #96ccfa;
+    text-shadow: 3px 2px 5px #000;
+}
+
+#priceText {
+    float: right;
+    
+}
+#song-list img {
+    position: absolute;
+    margin-top: 12px;
+    -webkit-box-shadow: 4px 6px 7px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 6px 7px -1px rgba(0,0,0,0.75);
+    box-shadow: 4px 6px 7px -1px rgba(0,0,0,0.75);
+}
+
+.fa {
+    color: #96ccfa;
+    text-shadow: 3px 2px 5px #000;
+}
