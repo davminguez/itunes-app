@@ -4,7 +4,12 @@ function getMusic() {
   itunes.getMusicByArtist(artist).then(drawSongs);
 }
 
-
+$('#artist').keypress(function (e) {
+  if (e.which === 13) {
+    e.preventDefault();
+    getMusic();
+  }
+});
 
 function drawSongs(songList) {
 
@@ -40,38 +45,35 @@ function drawSongs(songList) {
 
 
 
-  // Attempt to add play preview function to each play icon but didn't work because all play classes played all at once because they're named the same
-  // let sample = `
-  //   <script>$(document).ready(function () {
-  //   var audioElement = document.createElement('audio');
+    // Attempt to add play preview function to each play icon but didn't work because all play classes played all at once because they're named the same
+    // let sample = `
+    //   <script>$(document).ready(function () {
+    //   var audioElement = document.createElement('audio');
 
-  //   audioElement.setAttribute('src', "` + songPrev + `");
+    //   audioElement.setAttribute('src', "` + songPrev + `");
 
-  //   $.get();
+    //   $.get();
 
-  //   audioElement.addEventListener("load", function () {
-  //     audioElement.play();
-  //   }, true);
+    //   audioElement.addEventListener("load", function () {
+    //     audioElement.play();
+    //   }, true);
 
-  //   $('.play').click(function () {
-  //     audioElement.play();
-  //   });
+    //   $('.play').click(function () {
+    //     audioElement.play();
+    //   });
 
-  //   $('.pause').click(function () {
-  //     audioElement.stop();
-  //   });
-  // });
-  // </script>
-  // `
-  // itemList.append(sample);
- 
-  itemList.append(card);
+    //   $('.pause').click(function () {
+    //     audioElement.stop();
+    //   });
+    // });
+    // </script>
+    // `
+    // itemList.append(sample);
 
-  $('#results').html(songList.length + ' Results Found');
+    itemList.append(card);
 
+    $('#results').html(songList.length + ' Results Found');
 
-});
-
-
+  });
 
 }
